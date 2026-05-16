@@ -11,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -20,108 +19,114 @@ box-sizing:border-box;
 
 body{
 font-family:'Montserrat',sans-serif;
-background:linear-gradient(180deg,#fff7f8 0%,#fce7ec 100%);
+background:
+radial-gradient(circle at top, rgba(255,255,255,0.95) 0%, rgba(255,247,248,0.8) 30%, transparent 55%),
+linear-gradient(180deg,#fff7f8 0%,#fce7ec 100%);
 color:#5f4a4a;
 overflow-x:hidden;
 }
 
 .container{
 width:100%;
-max-width:420px;
+max-width:430px;
 margin:auto;
-padding:20px;
+padding:28px 20px;
 }
 
 .hero{
 text-align:center;
-padding-top:30px;
+padding-top:18px;
 }
 
-/* КРАСИВЫЙ ЭЛЛИПС ВОКРУГ ФОТО */
-
-.photo-frame{
-width:220px;
+.photo-card{
+width:190px;
 height:220px;
-margin:0 auto 25px;
-border-radius:50%;
-background:linear-gradient(135deg,#f7d7df,#fff3f6);
-display:flex;
-align-items:center;
-justify-content:center;
-border:3px solid rgba(212,175,55,0.45);
+margin:0 auto 28px;
+border-radius:38px;
+overflow:hidden;
+background:#fff;
 box-shadow:
-0 10px 30px rgba(212,175,55,0.18),
-0 0 0 12px rgba(255,255,255,0.35);
+0 18px 45px rgba(150,96,105,0.18),
+0 0 0 1px rgba(212,175,55,0.18);
+position:relative;
 }
 
-.hero img{
-width:180px;
-height:180px;
-border-radius:50%;
+.photo-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(180deg, transparent 55%, rgba(255,247,248,0.18));
+pointer-events:none;
+}
+
+.photo-card img{
+width:100%;
+height:100%;
 object-fit:cover;
-border:4px solid #d4af37;
-box-shadow:0 4px 15px rgba(0,0,0,0.18);
+display:block;
 }
 
 h1{
 font-family:'Cormorant Garamond',serif;
-font-size:46px;
+font-size:52px;
 font-weight:700;
 color:#b8860b;
-margin-bottom:10px;
+margin-bottom:6px;
+letter-spacing:0.5px;
 }
 
 .channel{
 font-size:16px;
-margin-bottom:20px;
+margin-bottom:22px;
 color:#7c5d5d;
 }
 
 .slogan{
 font-family:'Cormorant Garamond',serif;
-font-size:28px;
-line-height:1.4;
-margin-bottom:30px;
+font-size:29px;
+line-height:1.35;
+margin-bottom:32px;
 color:#6a4e4e;
 }
 
 .description{
-background:rgba(255,255,255,0.72);
-padding:22px;
-border-radius:24px;
-line-height:1.7;
+background:rgba(255,255,255,0.74);
+padding:24px;
+border-radius:26px;
+line-height:1.75;
 font-size:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
+box-shadow:0 12px 34px rgba(150,96,105,0.08);
 margin-bottom:30px;
 backdrop-filter:blur(10px);
 }
 
 .card{
-background:linear-gradient(145deg,#fff9fa,#ffeef3);
-padding:30px 24px;
-border-radius:28px;
+background:linear-gradient(145deg,#fffafa,#ffeef3);
+padding:32px 24px;
+border-radius:30px;
 text-align:center;
-box-shadow:0 12px 35px rgba(212,175,55,0.12);
-border:1px solid rgba(212,175,55,0.15);
-margin-bottom:30px;
+box-shadow:0 14px 38px rgba(212,175,55,0.12);
+border:1px solid rgba(212,175,55,0.13);
+margin-bottom:28px;
 position:relative;
 overflow:hidden;
 }
 
 .card::before{
-content:"✨";
+content:"✦";
 position:absolute;
-font-size:90px;
-opacity:0.06;
-right:-10px;
-top:-10px;
+font-size:95px;
+opacity:0.08;
+right:12px;
+top:4px;
+color:#d4af37;
 }
 
 .card h2{
 font-family:'Cormorant Garamond',serif;
-font-size:34px;
+font-size:35px;
 color:#b8860b;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .card p{
@@ -131,16 +136,16 @@ margin-bottom:24px;
 }
 
 button{
-background:linear-gradient(135deg,#d4af37,#f2d57c);
+background:linear-gradient(135deg,#c99a25,#f1d582);
 color:white;
 border:none;
-padding:16px 28px;
+padding:16px 30px;
 font-size:15px;
 border-radius:999px;
 cursor:pointer;
 font-weight:600;
 transition:0.3s ease;
-box-shadow:0 8px 20px rgba(212,175,55,0.25);
+box-shadow:0 9px 22px rgba(199,155,44,0.26);
 }
 
 button:hover{
@@ -148,28 +153,29 @@ transform:translateY(-2px);
 }
 
 .prediction-box{
-margin-top:25px;
+margin-top:24px;
 padding:22px;
-background:rgba(255,255,255,0.88);
+background:rgba(255,255,255,0.9);
 border-radius:22px;
 display:none;
 animation:fadeIn 0.6s ease;
 font-size:16px;
 line-height:1.8;
 color:#6b5252;
+box-shadow:inset 0 0 0 1px rgba(212,175,55,0.08);
 }
 
 .telegram-btn{
 display:block;
 text-align:center;
 text-decoration:none;
-background:#c79b2c;
+background:linear-gradient(135deg,#c99a25,#e6c267);
 color:white;
 padding:18px;
 border-radius:999px;
 font-weight:600;
 margin-top:20px;
-box-shadow:0 8px 20px rgba(199,155,44,0.25);
+box-shadow:0 10px 24px rgba(199,155,44,0.25);
 transition:0.3s ease;
 }
 
@@ -179,7 +185,7 @@ transform:translateY(-2px);
 
 footer{
 text-align:center;
-padding:35px 10px 20px;
+padding:34px 10px 16px;
 font-size:14px;
 color:#8b7070;
 line-height:1.6;
@@ -197,6 +203,20 @@ transform:translateY(0);
 }
 }
 
+@media(max-width:480px){
+h1{
+font-size:46px;
+}
+
+.slogan{
+font-size:26px;
+}
+
+.photo-card{
+width:176px;
+height:206px;
+}
+}
 </style>
 </head>
 
@@ -206,20 +226,16 @@ transform:translateY(0);
 
 <section class="hero">
 
-<div class="photo-frame">
-
+<div class="photo-card">
 <img src="https://i.ibb.co/4n66zvDG/c509d350-d41e-4227-a240-2916b1eccc60-1.png" alt="Алла">
-
 </div>
 
 <h1>Алла</h1>
 
-<p class="channel">
-@Alla_matrix
-</p>
+<p class="channel">@Alla_matrix</p>
 
 <p class="slogan">
-Возвращение к себе начинается
+Возвращение к себе начинается<br>
 с честного взгляда внутрь ✨
 </p>
 
@@ -267,7 +283,6 @@ transform:translateY(0);
 </div>
 
 <script>
-
 const predictions = [
 
 "Сегодня тебе важно перестать искать одобрение снаружи. Ответ, который ты ждёшь, уже живёт внутри тебя.",
@@ -305,17 +320,11 @@ const predictions = [
 ];
 
 function showPrediction(){
-
 const random = predictions[Math.floor(Math.random()*predictions.length)];
-
 const box = document.getElementById('predictionBox');
-
 box.style.display = 'block';
-
 box.innerHTML = "🌙 " + random;
-
 }
-
 </script>
 
 </body>

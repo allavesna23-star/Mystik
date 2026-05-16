@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alla Matrix — Предсказание дня</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alla Matrix</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -20,7 +22,6 @@ box-sizing:border-box;
 body{
 font-family:'Montserrat',sans-serif;
 background:
-radial-gradient(circle at top, rgba(255,255,255,0.95) 0%, rgba(255,247,248,0.8) 30%, transparent 55%),
 linear-gradient(180deg,#fff7f8 0%,#fce7ec 100%);
 color:#5f4a4a;
 overflow-x:hidden;
@@ -35,36 +36,36 @@ padding:28px 20px;
 
 .hero{
 text-align:center;
-padding-top:18px;
+padding-top:20px;
 }
+
+/* ФОТО */
 
 .photo-card{
 width:190px;
-height:220px;
+height:190px;
 margin:0 auto 28px;
-border-radius:38px;
+border-radius:50%;
 overflow:hidden;
-background:#fff;
 box-shadow:
-0 18px 45px rgba(150,96,105,0.18),
-0 0 0 1px rgba(212,175,55,0.18);
-position:relative;
-}
-
-.photo-card::after{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(180deg, transparent 55%, rgba(255,247,248,0.18));
-pointer-events:none;
+0 12px 35px rgba(150,96,105,0.18);
+border:4px solid rgba(255,255,255,0.8);
+background:white;
 }
 
 .photo-card img{
 width:100%;
 height:100%;
 object-fit:cover;
+
+/* ВОТ ЭТО ЦЕНТРУЕТ ЛИЦО */
+
+object-position:center 18%;
+
 display:block;
 }
+
+/* ТЕКСТ */
 
 h1{
 font-family:'Cormorant Garamond',serif;
@@ -72,7 +73,6 @@ font-size:52px;
 font-weight:700;
 color:#b8860b;
 margin-bottom:6px;
-letter-spacing:0.5px;
 }
 
 .channel{
@@ -90,7 +90,7 @@ color:#6a4e4e;
 }
 
 .description{
-background:rgba(255,255,255,0.74);
+background:rgba(255,255,255,0.75);
 padding:24px;
 border-radius:26px;
 line-height:1.75;
@@ -135,6 +135,8 @@ line-height:1.7;
 margin-bottom:24px;
 }
 
+/* КНОПКА */
+
 button{
 background:linear-gradient(135deg,#c99a25,#f1d582);
 color:white;
@@ -152,6 +154,8 @@ button:hover{
 transform:translateY(-2px);
 }
 
+/* ПРЕДСКАЗАНИЕ */
+
 .prediction-box{
 margin-top:24px;
 padding:22px;
@@ -162,8 +166,9 @@ animation:fadeIn 0.6s ease;
 font-size:16px;
 line-height:1.8;
 color:#6b5252;
-box-shadow:inset 0 0 0 1px rgba(212,175,55,0.08);
 }
+
+/* TELEGRAM */
 
 .telegram-btn{
 display:block;
@@ -183,6 +188,8 @@ transition:0.3s ease;
 transform:translateY(-2px);
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:34px 10px 16px;
@@ -192,6 +199,7 @@ line-height:1.6;
 }
 
 @keyframes fadeIn{
+
 from{
 opacity:0;
 transform:translateY(10px);
@@ -201,22 +209,9 @@ to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
-@media(max-width:480px){
-h1{
-font-size:46px;
-}
-
-.slogan{
-font-size:26px;
-}
-
-.photo-card{
-width:176px;
-height:206px;
-}
-}
 </style>
 </head>
 
@@ -227,12 +222,16 @@ height:206px;
 <section class="hero">
 
 <div class="photo-card">
+
 <img src="https://i.ibb.co/4n66zvDG/c509d350-d41e-4227-a240-2916b1eccc60-1.png" alt="Алла">
+
 </div>
 
 <h1>Алла</h1>
 
-<p class="channel">@Alla_matrix</p>
+<p class="channel">
+@Alla_matrix
+</p>
 
 <p class="slogan">
 Возвращение к себе начинается<br>
@@ -242,6 +241,7 @@ height:206px;
 </section>
 
 <div class="description">
+
 Я — Алла, работаю с Матрицей Судьбы и Таро
 и помогаю тем, кто устал жить «как надо»,
 разобраться в своём сценарии
@@ -252,11 +252,14 @@ height:206px;
 
 Здесь — про смыслы, предназначение,
 финансы, внутренние ответы и путь к себе 🌙
+
 </div>
 
 <section class="card">
 
-<h2>Твоё предсказание дня</h2>
+<h2>
+Твоё предсказание дня
+</h2>
 
 <p>
 Нажми на кнопку — и получи интуитивное послание,
@@ -276,13 +279,16 @@ height:206px;
 </a>
 
 <footer>
+
 С любовью и заботой 🌸<br>
 Алла • @Alla_matrix
+
 </footer>
 
 </div>
 
 <script>
+
 const predictions = [
 
 "Сегодня тебе важно перестать искать одобрение снаружи. Ответ, который ты ждёшь, уже живёт внутри тебя.",
@@ -320,11 +326,17 @@ const predictions = [
 ];
 
 function showPrediction(){
+
 const random = predictions[Math.floor(Math.random()*predictions.length)];
+
 const box = document.getElementById('predictionBox');
+
 box.style.display = 'block';
+
 box.innerHTML = "🌙 " + random;
+
 }
+
 </script>
 
 </body>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alla Matrix — Предсказание дня</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Montserrat', sans-serif;
+background: linear-gradient(180deg, #fff7f8 0%, #fce7ec 100%);
+color: #5f4a4a;
+overflow-x: hidden;
+}
+
+.container {
+width: 100%;
+max-width: 420px;
+margin: auto;
+padding: 20px;
+}
+
+.hero {
+text-align: center;
+padding-top: 30px;
+}
+
+.photo-placeholder {
+width: 170px;
+height: 170px;
+border-radius: 50%;
+margin: 0 auto 25px;
+background: linear-gradient(135deg, #f7d7df, #fbe9ec);
+border: 3px solid rgba(212, 175, 55, 0.4);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 20px;
+font-size: 14px;
+line-height: 1.5;
+color: #8a6b6b;
+box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+h1 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 46px;
+font-weight: 700;
+color: #b8860b;
+margin-bottom: 10px;
+}
+
+.channel {
+font-size: 16px;
+margin-bottom: 20px;
+color: #7c5d5d;
+}
+
+.slogan {
+font-family: 'Cormorant Garamond', serif;
+font-size: 28px;
+line-height: 1.4;
+margin-bottom: 30px;
+color: #6a4e4e;
+}
+
+.description {
+background: rgba(255,255,255,0.7);
+padding: 22px;
+border-radius: 24px;
+line-height: 1.7;
+font-size: 15px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+margin-bottom: 30px;
+backdrop-filter: blur(10px);
+}
+
+.card {
+background: linear-gradient(145deg, #fff9fa, #ffeef3);
+padding: 30px 24px;
+border-radius: 28px;
+text-align: center;
+box-shadow: 0 12px 35px rgba(212, 175, 55, 0.12);
+border: 1px solid rgba(212,175,55,0.15);
+margin-bottom: 30px;
+position: relative;
+overflow: hidden;
+}
+
+.card::before {
+content: "✨";
+position: absolute;
+font-size: 90px;
+opacity: 0.06;
+right: -10px;
+top: -10px;
+}
+
+.card h2 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 34px;
+color: #b8860b;
+margin-bottom: 20px;
+}
+
+.card p {
+font-size: 15px;
+line-height: 1.7;
+margin-bottom: 24px;
+}
+
+button {
+background: linear-gradient(135deg, #d4af37, #f2d57c);
+color: white;
+border: none;
+padding: 16px 28px;
+font-size: 15px;
+border-radius: 999px;
+cursor: pointer;
+font-weight: 600;
+transition: 0.3s ease;
+box-shadow: 0 8px 20px rgba(212,175,55,0.25);
+}
+
+button:hover {
+transform: translateY(-2px);
+}
+
+.prediction-box {
+margin-top: 25px;
+padding: 22px;
+background: rgba(255,255,255,0.85);
+border-radius: 22px;
+display: none;
+animation: fadeIn 0.6s ease;
+font-size: 16px;
+line-height: 1.8;
+color: #6b5252;
+}
+
+.telegram-btn {
+display: block;
+text-align: center;
+text-decoration: none;
+background: #c79b2c;
+color: white;
+padding: 18px;
+border-radius: 999px;
+font-weight: 600;
+margin-top: 20px;
+box-shadow: 0 8px 20px rgba(199,155,44,0.25);
+transition: 0.3s ease;
+}
+
+.telegram-btn:hover {
+transform: translateY(-2px);
+}
+
+footer {
+text-align: center;
+padding: 35px 10px 20px;
+font-size: 14px;
+color: #8b7070;
+line-height: 1.6;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(10px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@media (max-width: 480px) {
+h1 {
+font-size: 40px;
+}
+
+.slogan {
+font-size: 24px;
+}
+
+.card h2 {
+font-size: 30px;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<section class="hero">
+<div class="photo-placeholder">
+🌸
+<br><br>
+ВСТАВЬ СЮДА<br>
+СВОЁ ФОТО<br>
+ИЛИ АВАТАР
+</div>
+
+<h1>Алла</h1>
+<p class="channel">@Alla_matrix</p>
+
+<p class="slogan">
+Возвращение к себе начинается
+с честного взгляда внутрь ✨
+</p>
+</section>
+
+<div class="description">
+Я — Алла, работаю с Матрицей Судьбы и Таро
+и помогаю тем, кто устал жить «как надо»,
+разобраться в своём сценарии
+и начать опираться на себя,
+а не на ожидания других.
+<br><br>
+Здесь — про смыслы, предназначение,
+финансы, внутренние ответы и путь к себе 🌙
+</div>
+
+<section class="card">
+<h2>Твоё предсказание дня</h2>
+<p>
+Нажми на кнопку — и получи интуитивное послание,
+которое именно сейчас важно услышать твоей душе ✨
+</p>
+
+<button onclick="showPrediction()">
+Получить послание
+</button>
+
+<div class="prediction-box" id="predictionBox"></div>
+</section>
+
+<a class="telegram-btn" href="https://t.me/Alla_matrix" target="_blank">
+Записаться к Алле
+</a>
+
+<footer>
+С любовью и заботой 🌸<br>
+Алла • @Alla_matrix
+</footer>
+
+</div>
+
+<script>
+const predictions = [
+"Сегодня тебе важно перестать искать одобрение снаружи. Ответ, который ты ждёшь, уже живёт внутри тебя.",
+"Твоя энергия сейчас просит не спешить. Иногда именно пауза помогает услышать себя по-настоящему.",
+"Ты находишься ближе к своему предназначению, чем тебе кажется. Не обесценивай путь, который уже прошла.",
+"Финансовый поток начинается там, где ты перестаёшь сомневаться в своей ценности.",
+"Сегодня Вселенная напоминает: тебе не нужно быть идеальной, чтобы быть любимой.",
+"Сложная ситуация, через которую ты проходишь, — не наказание, а точка внутреннего роста.",
+"Разреши себе отпустить то, что давно перестало делать тебя счастливой.",
+"Твоя интуиция уже знает ответ. Просто перестань заглушать её страхами.",
+"Сейчас особенно важно выбирать себя — мягко, спокойно и без чувства вины.",
+"Очень скоро появится знак или разговор, который поможет тебе увидеть ситуацию по-новому."
+];
+
+function showPrediction() {
+const random = predictions[Math.floor(Math.random() * predictions.length)];
+const box = document.getElementById('predictionBox');
+box.style.display = 'block';
+box.innerHTML = "🌙 " + random;
+}
+</script>
+
+</body>
+</html>
